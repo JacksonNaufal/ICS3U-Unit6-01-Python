@@ -2,41 +2,31 @@
 
 # Created by: Jackson Naufal
 # Created on: March 2022
-# This is a volume calculator
+# This is a random number average calculator
 
-import math
-
-
-def grade_function(radius, height):
-
-    # output
-
-    volume = math.pi * (radius**2) * height
-
-    return volume
+import random
 
 
 def main():
 
+    random_number = []
+    total = 0
+    counter = 0
+    rounded = 0
     # input
-    user_radius = input("Enter Your radius (mm): ")
-    user_height = input("Enter Your height (mm): ")
+    for counter in range(10):
+        random_num = random.randint(0, 100)
+        random_number.append(random_num)
+        print("The random number is {0}".format(random_num))
+
+    for counter in range(10):
+        total = total + random_num
+
+    overall = sum(random_number) / len(random_number)
+    rounded = round(overall, 1)
+    print("\nThe average number is {0}".format(overall))
 
     # process
-    try:
-        user_radius_int = float(user_radius)
-        user_height_int = float(user_height)
-        function_grade = round(
-            grade_function(radius=user_radius_int, height=user_height_int), 2
-        )
-
-        print("The volume is {0} mm³".format(function_grade))
-
-    except Exception:
-        print("Not An Integer")
-
-    finally:
-        print("\nDone.")
 
 
 if __name__ == "__main__":
