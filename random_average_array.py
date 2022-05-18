@@ -13,7 +13,7 @@ def main():
     total = 0
     counter = 0
     rounded = 0
-    # input
+    # process & output
     for counter in range(10):
         random_num = random.randint(0, 100)
         random_number.append(random_num)
@@ -25,8 +25,6 @@ def main():
     overall = sum(random_number) / len(random_number)
     rounded = round(overall, 1)
     print("\nThe average number is {0}".format(overall))
-
-    # process
 
 
 if __name__ == "__main__":
